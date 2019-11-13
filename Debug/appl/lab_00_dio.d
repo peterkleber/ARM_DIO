@@ -7,6 +7,8 @@ appl/lab_00_dio.obj: ../appl/../mcal/port_driver/port.h
 appl/lab_00_dio.obj: ../appl/../mcal/dio/dio.h
 appl/lab_00_dio.obj: ../appl/../mcal/dio/../../utils/STD_Types.h
 appl/lab_00_dio.obj: ../appl/../mcal/dio/DIO_types.h
+appl/lab_00_dio.obj: ../appl/../mcal/mcu_hw.h
+appl/lab_00_dio.obj: ../appl/../mcal/../utils/Bit_Math.h
 
 ../appl/lab_00_dio.c: 
 ../appl/../mcal/global_interrupt.h: 
@@ -15,3 +17,5 @@ appl/lab_00_dio.obj: ../appl/../mcal/dio/DIO_types.h
 ../appl/../mcal/dio/dio.h: 
 ../appl/../mcal/dio/../../utils/STD_Types.h: 
 ../appl/../mcal/dio/DIO_types.h: 
+../appl/../mcal/mcu_hw.h: 
+../appl/../mcal/../utils/Bit_Math.h: 

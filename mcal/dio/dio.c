@@ -21,7 +21,7 @@ STD_levelType Dio_ReadChannel(Dio_ChannelType ChannelId)
 
     switch(PortId){
     case Dio_Port_A :
-      if (PORTA_REG.GPIODATA & (1<<ChannelPos) == STD_high) {
+        if ((PORTA_REG.GPIODATA>>ChannelPos) & (1u) == STD_high) {
           return STD_high ;
       }
       else{
@@ -29,7 +29,7 @@ STD_levelType Dio_ReadChannel(Dio_ChannelType ChannelId)
       }
         break;
     case Dio_Port_B :
-        if (PORTB_REG.GPIODATA & (1<<ChannelPos) == STD_high) {
+        if ((PORTB_REG.GPIODATA>>ChannelPos) & (1u) == STD_high) {
             return STD_high ;
         }
         else{
@@ -37,7 +37,7 @@ STD_levelType Dio_ReadChannel(Dio_ChannelType ChannelId)
         }
         break;
     case Dio_Port_C :
-        if (PORTC_REG.GPIODATA & (1<<ChannelPos) == STD_high) {
+        if ((PORTC_REG.GPIODATA>>ChannelPos) & (1u) == STD_high) {
             return STD_high ;
         }
         else{
@@ -45,7 +45,7 @@ STD_levelType Dio_ReadChannel(Dio_ChannelType ChannelId)
         }
         break;
     case Dio_Port_D :
-        if (PORTD_REG.GPIODATA & (1<<ChannelPos) == STD_high) {
+        if ((PORTD_REG.GPIODATA>>ChannelPos) & (1u) == STD_high) {
             return STD_high ;
         }
         else{
@@ -53,7 +53,7 @@ STD_levelType Dio_ReadChannel(Dio_ChannelType ChannelId)
         }
         break;
     case Dio_Port_E :
-        if (PORTE_REG.GPIODATA & (1<<ChannelPos) == STD_high) {
+        if ((PORTE_REG.GPIODATA>>ChannelPos) & (1u) == STD_high) {
             return STD_high ;
         }
         else{
@@ -61,7 +61,8 @@ STD_levelType Dio_ReadChannel(Dio_ChannelType ChannelId)
         }
         break;
     case Dio_Port_F :
-        if (PORTF_REG.GPIODATA & (1<<ChannelPos) == STD_high) {
+      //  if (PORTF_REG.GPIODATA & (1<<ChannelPos) == STD_high) {
+        if ((PORTF_REG.GPIODATA>>ChannelPos) & (1u) == STD_high) {
             return STD_high ;
         }
         else{

@@ -53,6 +53,16 @@ void PORT_init(void)
             break;
         }
 
+        //Unlock Ports
+        switch(PortCfgArr[i].Channel){
+        case Port_Channel_F0 :
+
+            PORTF_REG.GPIOLOCK = 0x4C4F434B; /* unlock commit register */
+            PORTF_REG.GPIOCR = 0x01; /* make PORTF0 configurable */
+            break;
+
+        }
+
         /* set channel direction */
         if(PortCfgArr[i].Dir == port_Dir_Output )
         {
