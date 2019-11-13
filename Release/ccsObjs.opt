@@ -1,0 +1,1 @@
+"./tm4c123gh6pm_startup_ccs.obj" "./appl/lab_00_dio.obj" "./config/port_lcfg.obj" "./mcal/dio/dio.obj" "./mcal/nvic/nvic.obj" "./mcal/port_driver/port.obj" "./mcal/sys_ctr/SysCtr.obj" "../tm4c123gh6pm.cmd" -llibc.a 
